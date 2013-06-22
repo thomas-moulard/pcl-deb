@@ -1,0 +1,29 @@
+From: Thomas Moulard <thomas.moulard@gmail.com>
+Date: Sat, 22 Jun 2013 19:12:55 +0900
+Subject: Remove harcoded SSE/-march=native compilation flags.
+
+Do not add SSE flags and other agressive compilation flags
+which may generate instruction older processors cannot handle.
+
+Forwarded: no
+Author: Thomas Moulard <thomas.moulard@gmail.com>
+---
+ CMakeLists.txt | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 8a735bc..6aacbcb 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -86,8 +86,9 @@ if(MSVC)
+ endif()
+
+ # check for SSE flags
+-include(${PCL_SOURCE_DIR}/cmake/pcl_find_sse.cmake)
+-PCL_CHECK_FOR_SSE()
++# Debian: do not use SSE/-march=native flags while compiling package.
++#include(${PCL_SOURCE_DIR}/cmake/pcl_find_sse.cmake)
++#PCL_CHECK_FOR_SSE()
+
+ if (__COMPILER_PATHSCALE)
+   SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-uninitialized -zerouv -pthread -mp")

@@ -2,11 +2,11 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_poisson_reconstruction \- FIXME
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_poisson_reconstruction input.pcd output.vtk <options>
 
 .SH DESCRIPTION
 
@@ -14,7 +14,10 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+                    -leaf X    = the voxel size (default: 0.010000)
+                     -iso X     = the iso level (default: 0.000000)
+                     -dot X     = use the voxelization algorithm combined with a dot product (i.e. MarchingCubesGreedy vs. MarchingCubesGreedyDot) (default: 1)
+
 
 .SH SEE ALSO
 

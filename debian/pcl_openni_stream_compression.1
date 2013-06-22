@@ -1,3 +1,4 @@
+
 .TH PCL 1
 
 .SH NAME
@@ -6,15 +7,49 @@ FIXME \- FIXME
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_stream_compression [mode] [profile] [parameters]
 
 .SH DESCRIPTION
 
-FIXME
+PCL point cloud stream compression
 
 .SH OPTIONS
 
-FIXME
+  I/O:
+      -f file  : file name
+
+  file compression mode:
+      -x: encode point cloud stream to file
+      -d: decode from file and display point cloud stream
+
+  network streaming mode:
+      -s       : start server on localhost
+      -c host  : connect to server and display decoded cloud stream
+
+  optional compression profile:
+      -p profile : select compression profile:
+                     -"lowC"  Low resolution with color
+                     -"lowNC" Low resolution without color
+                     -"medC" Medium resolution with color
+                     -"medNC" Medium resolution without color
+                     -"highC" High resolution with color
+                     -"highNC" High resolution without color
+
+  optional compression parameters:
+      -r prec  : point precision Hz
+      -o prec  : octree voxel size
+      -v       : enable voxel-grid downsampling
+      -a       : enable color coding
+      -i rate  : i-frame rate
+      -b bits  : bits/color component
+      -t       : output statistics
+      -e       : show input cloud during encoding
+
+      -minmax min-max  :: set the PassThrough min-max cutting values (default: 0-3.0)
+      -field  X        :: set the PassThrough field/dimension 'X' to filter data on (default: 'z')
+
+  example:
+      ./pcl_stream_compression -x -p highC -t -f pc_compressed.pcc
 
 .SH SEE ALSO
 

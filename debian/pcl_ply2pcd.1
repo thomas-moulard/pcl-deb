@@ -2,19 +2,26 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_ply2pcd \- Convert a PLY file to PCD format.
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_ply2pcd input.ply output.pcd
 
 .SH DESCRIPTION
 
-FIXME
+Convert a PLY file to PCD format.
+With no INFILE/OUTFILE, or when INFILE/OUTFILE is -, read standard input/output.
 
 .SH OPTIONS
 
-FIXME
+  -h, --help           display this help and exit
+  -v, --version        output version information and exit
+  -f, --format=FORMAT  set format
+
+FORMAT may be one of the following: ascii, binary, binary_big_endian,
+binary_little_endian.
+If no format is given, the format of INFILE is kept.
 
 .SH SEE ALSO
 

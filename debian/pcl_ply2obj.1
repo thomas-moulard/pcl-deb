@@ -2,19 +2,31 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_ply2obj \- Convert a PLY file to an OBJ file.
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_ply2obj [OPTION] [[INFILE] OUTFILE]
 
 .SH DESCRIPTION
 
-FIXME
+Convert a PLY file to an OBJ file.
+With no INFILE/OUTFILE, or when INFILE/OUTFILE is -, read standard input/output.
+
+The following PLY elements and properties are supported.
+  element vertex
+    property float32 x
+    property float32 y
+    property float32 z
+  element face
+    property list uint8 int32 vertex_indices.
 
 .SH OPTIONS
 
-FIXME
+  -h, --help       display this help and exit
+  -v, --version    output version information and exit
+  -f, --flag=FLAG  set flag
+FLAG may be one of the following: triangulate.
 
 .SH SEE ALSO
 

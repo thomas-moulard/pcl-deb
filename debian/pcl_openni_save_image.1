@@ -14,7 +14,28 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+usage: pcl_openni_save_image [((<device_id> | <path-to-oni-file>) [-imagemode <mode>] | -l [<device_id>]| -h | --help)]
+pcl_openni_save_image -h | --help : shows this help
+pcl_openni_save_image -l : list all available devices
+pcl_openni_save_image -l <device-id> : list all available modes for specified device
+                 device_id may be #1, #2, ... for the first, second etc device in the list or
+                 bus@address for the device connected to a specific usb-bus / address combination or
+                 <serial-number>
+
+examples:
+pcl_openni_save_image "#1"
+    uses the first device.
+pcl_openni_save_image "./temp/test.oni"
+    uses the oni-player device to play back oni file given by path.
+pcl_openni_save_image -l
+    lists all available devices.
+pcl_openni_save_image -l "#2"
+    lists all available modes for the second device
+pcl_openni_save_image A00361800903049A
+    uses the device with the serial number 'A00361800903049A'.
+pcl_openni_save_image 1@16
+    uses the device on address 16 at USB bus 1.
+
 
 .SH SEE ALSO
 

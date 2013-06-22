@@ -6,7 +6,7 @@ FIXME \- FIXME
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_openni_tracking <device_id> [-C] [-g]
 
 .SH DESCRIPTION
 
@@ -14,7 +14,12 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+  -C:  initialize the pointcloud to track without plane segmentation
+  -D: visualizing with non-downsampled pointclouds.
+  -P: not visualizing particle cloud.
+  -fixed: use the fixed number of the particles.
+  -d <value>: specify the grid size of downsampling (defaults to 0.01).
+
 
 .SH SEE ALSO
 

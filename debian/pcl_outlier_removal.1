@@ -2,7 +2,7 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_outlier_removal \- Statistical Outlier Removal filtering of a point cloud.
 
 .SH SYNOPSIS
 
@@ -10,11 +10,16 @@ FIXME \- FIXME
 
 .SH DESCRIPTION
 
-FIXME
+Statistical Outlier Removal filtering of a point cloud.
 
 .SH OPTIONS
 
-FIXME
+                     -method X = the outlier removal method to be used (options: radius / statistical) (default: radius)
+                     -radius X = (RadiusOutlierRemoval) the sphere radius used for determining the k-nearest neighbors (default: 0)
+                     -min_pts X = (RadiusOutlierRemoval) the minimum number of neighbors that a point needs to have in the given search radius in order to be considered an inlier (default: 0)
+                     -mean_k X = (StatisticalOutlierRemoval only) the number of points to use for mean distance estimation (default: 2)
+                     -std_dev_mul X = (StatisticalOutlierRemoval only) the standard deviation multiplier threshold (default: 0.000000)
+                     -inliers X = (StatisticalOutlierRemoval only) decides whether the inliers should be returned (1), or the outliers (0). (default: 1)
 
 .SH SEE ALSO
 

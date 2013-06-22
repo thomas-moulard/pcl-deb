@@ -2,11 +2,11 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_virtual_scanner \- FIXME
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_virtual_scanner [options] <model.ply | model.vtk>
 
 .SH DESCRIPTION
 
@@ -14,7 +14,13 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+-object_coordinates <0|1> : save the dataset in object coordinates (1) or camera coordinates (0)
+-single_view <0|1>        : take a single snapshot (1) or record a lot of camera poses on a view sphere (0)
+-view_point <x,y,z>       : set the camera viewpoint from where the acquisition will take place
+-target_point <x,y,z>     : the target point that the camera should look at (default: 0, 0, 0)
+-organized <0|1>          : create an organized, grid-like point cloud of width x height (1), or keep it unorganized with height = 1 (0)
+-noise <0|1>              : add gausian noise (1) or keep the model noiseless (0)
+-noise_std <x>            : use X times the standard deviation
 
 .SH SEE ALSO
 

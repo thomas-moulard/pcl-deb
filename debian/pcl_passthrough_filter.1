@@ -2,19 +2,22 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_passthrough_filter \- Filter a point cloud using the pcl::PassThroughFilterEstimate.
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_passthrough_filter input.pcd output.pcd <options>
 
 .SH DESCRIPTION
 
-FIXME
+Filter a point cloud using the pcl::PassThroughFilterEstimate.
 
 .SH OPTIONS
 
-FIXME
+                     -field X = the field of the point cloud we want to apply the filter to (default: z)
+                     -min X = lower limit of the filter (default: 0.000000)
+                     -max X = upper limit of the filter (default: 1.000000)
+                     -inside X = keep the points inside the [min, max] interval or not (default: 1)
 
 .SH SEE ALSO
 

@@ -14,7 +14,12 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+Convert a CAD model to a point cloud using uniform sampling. For more information, use: pcl_mesh_sampling -h
+Syntax is: pcl_mesh_sampling input.{ply,obj} output.pcd <options>
+  where options are:
+                     -n_samples X      = number of samples (default: 100000)
+                     -leaf_size X  = the XYZ leaf size for the VoxelGrid -- for data reduction (default: 0.010000 m)
+
 
 .SH SEE ALSO
 

@@ -14,7 +14,14 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+Moving Least Squares smoothing of a point cloud. For more information, use: pcl_mls_smoothing -h
+Syntax is: pcl_mls_smoothing input.pcd output.pcd <options>
+  where options are:
+                     -search_radius X = sphere radius to be used for finding the k-nearest neighbors used for fitting (default: 0.000000)
+                     -sqr_gauss_param X = parameter used for the distance based weighting of neighbors (recommended = search_radius^2) (default: 0.000000)
+                     -use_polynomial_fit X = decides whether the surface and normal are approximated using a polynomial or only via tangent estimation (default: 0)
+                     -polynomial_order X = order of the polynomial to be fit (implicitly, use_polynomial_fit = 1) (default: 2)
+
 
 .SH SEE ALSO
 

@@ -14,7 +14,12 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+Estimate surface normals using pcl::NormalEstimation. For more information, use: pcl_normal_estimation -h
+Syntax is: pcl_normal_estimation input.pcd output.pcd <options>
+  where options are:
+                     -radius X = use a radius of Xm around each point to determine the neighborhood (default: 0.000000)
+                     -k X      = use a fixed number of X-nearest neighbors around each point (default: 0.000000)
+
 
 .SH SEE ALSO
 

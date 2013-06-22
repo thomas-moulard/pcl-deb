@@ -14,7 +14,12 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+Extract point clusters using pcl::EuclideanClusterExtraction. For more information, use: pcl_cluster_extraction -h
+Syntax is: pcl_cluster_extraction input.pcd output.pcd <options>
+  where options are:
+                     -min X = use a minimum of X points peer cluster (default: 100)
+                     -max X      = use a maximum of X points peer cluster (default: 25000)
+                     -tolerance X = the spacial distance between clusters (default: 0.020000)
 
 .SH SEE ALSO
 

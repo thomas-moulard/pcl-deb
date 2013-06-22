@@ -2,11 +2,11 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_transform_point_cloud \- FIXME
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_transform_point_cloud input.pcd output.pcd <options>
 
 .SH DESCRIPTION
 
@@ -14,7 +14,16 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+           -trans dx,dy,dz           = the translation (default: 0.0, 0.0, 0.0)
+           -quat w,x,y,z             = rotation as quaternion
+           -axisangle ax,ay,az,theta = rotation in axis-angle form
+           -matrix v1,v2,...,v8,v9   = a 3x3 affine transform
+           -matrix v1,v2,...,v15,v16 = a 4x4 transformation matrix
+   Note: If a rotation is not specified, it will default to no rotation.
+         If redundant or conflicting transforms are specified, then:
+           -axisangle will override -quat
+           -matrix (3x3) will take override -axisangle and -quat
+           -matrix (4x4) will take override all other arguments
 
 .SH SEE ALSO
 

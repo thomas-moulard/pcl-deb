@@ -2,19 +2,38 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_voxel_grid \- Downsample a cloud using pcl::VoxelGrid.
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_voxel_grid input.pcd output.pcd <options>
 
 .SH DESCRIPTION
 
-FIXME
+Downsample a cloud using pcl::VoxelGrid.
 
 .SH OPTIONS
 
-FIXME
+.TP 5
+\-leaf x,y,z
+the VoxelGrid leaf size (default: 0.010000, 0.010000, 0.010000)
+
+.TP 5
+\-field X
+filter data along this field name (default: z)
+
+.TP 5
+\-fmin  X
+filter all data with values along the specified field smaller than this value (default: -inf)
+
+.TP 5
+\-fmax  X
+filter all data with values along the specified field larger than this value (default: inf)
+
+.TP 5
+\-h
+display help message
+
 
 .SH SEE ALSO
 

@@ -14,7 +14,22 @@ FIXME
 
 .SH OPTIONS
 
-FIXME
+Syntax is: pcl_feature_matching <source-pcd-file> <target-pcd-file> <keypoint-method> <descriptor-type> <surface-reconstruction-method>
+available <keypoint-methods>: 1 = Sift3D
+                              2 = Harris3D
+                              3 = Tomasi3D
+                              4 = Noble3D
+                              5 = Lowe3D
+                              6 = Curvature3D
+
+available <descriptor-types>: 1 = FPFH
+                              2 = SHOTRGB
+                              3 = PFH
+                              4 = PFHRGB
+
+available <surface-methods>:  1 = Greedy Projection
+                              2 = Marching Cubes
+
 
 .SH SEE ALSO
 

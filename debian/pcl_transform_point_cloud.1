@@ -2,7 +2,7 @@
 
 .SH NAME
 
-pcl_transform_point_cloud \- FIXME
+pcl_transform_point_cloud \- Apply geometric transformation to point cloud
 
 .SH SYNOPSIS
 
@@ -10,20 +10,34 @@ pcl_transform_point_cloud \- FIXME
 
 .SH DESCRIPTION
 
-FIXME
+Apply geometric transformation to point cloud.
 
 .SH OPTIONS
 
-           -trans dx,dy,dz           = the translation (default: 0.0, 0.0, 0.0)
-           -quat w,x,y,z             = rotation as quaternion
-           -axisangle ax,ay,az,theta = rotation in axis-angle form
-           -matrix v1,v2,...,v8,v9   = a 3x3 affine transform
-           -matrix v1,v2,...,v15,v16 = a 4x4 transformation matrix
-   Note: If a rotation is not specified, it will default to no rotation.
-         If redundant or conflicting transforms are specified, then:
-           -axisangle will override -quat
-           -matrix (3x3) will take override -axisangle and -quat
-           -matrix (4x4) will take override all other arguments
+.TP 5
+\-trans dx,dy,dz
+the translation (default: 0.0, 0.0, 0.0)
+
+.TP 5
+\-quat w,x,y,z
+rotation as quaternion
+
+.TP 5
+\-axisangle ax,ay,az,theta
+rotation in axis\-angle form
+
+.TP 5
+\-matrix v1,v2,...,v8,v9   = a 3x3 affine transform
+
+.TP 5
+-matrix v1,v2,...,v15,v16 = a 4x4 transformation matrix
+
+
+Note: If a rotation is not specified, it will default to no rotation.
+If redundant or conflicting transforms are specified, then:
+\-axisangle will override \-quat
+\-matrix (3x3) will take override \-axisangle and \-quat
+\-matrix (4x4) will take override all other arguments
 
 .SH SEE ALSO
 

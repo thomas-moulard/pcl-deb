@@ -2,24 +2,32 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_boundary_estimation \- Estimate boundary points using pcl::BoundaryEstimation.
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_boundary_estimation input.pcd output.pcd <options>
 
 .SH DESCRIPTION
 
-FIXME
+Estimate boundary points using pcl::BoundaryEstimation.
 
 .SH OPTIONS
 
-Estimate boundary points using pcl::BoundaryEstimation. For more information, use: pcl_boundary_estimation -h
-Syntax is: pcl_boundary_estimation input.pcd output.pcd <options>
-  where options are:
-                     -radius X = use a radius of Xm around each point to determine the neighborhood (default: 0.000000)
-                     -k X      = use a fixed number of X-nearest neighbors around each point (default: 0)
-                     -thresh X = the decision boundary (angle threshold) that marks points as boundary or regular (default: 1.570796)
+.TP 5
+\-radius X
+use a radius of Xm around each point to determine the neighborhood
+(default: 0.000000)
+
+.TP 5
+\-k X
+use a fixed number of X\-nearest neighbors around each point (default:
+0)
+
+.TP 5
+\-thresh X
+the decision boundary (angle threshold) that marks points as boundary
+or regular (default: 1.570796)
 
 .SH SEE ALSO
 

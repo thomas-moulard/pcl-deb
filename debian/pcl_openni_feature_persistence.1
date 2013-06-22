@@ -2,11 +2,11 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_openni_grab_frame \- FIXME
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_openni_grab_frame <filename> <options>
 
 .SH DESCRIPTION
 
@@ -14,15 +14,21 @@ FIXME
 
 .SH OPTIONS
 
-pcl_openni_grab_frame <filename> <options>
+filename: if no filename is provided a generic timestamp will be set as filename
 
-  filename: if no filename is provided a generic timestamp will be set as filename
+.TP 5
+\-format
+PCD file format (b=binary; bc=binary compressed; ascii=ascii; all=all)
+(default: bc)
 
-  where options are:
-                    -format = PCD file format (b=binary; bc=binary compressed; ascii=ascii; all=all) (default: bc)
-                    -XYZ  = store just a XYZ cloud
-                    -paused = start grabber in paused mode. Toggle pause by pressing the space bar
-                              or grab single frames by just pressing the left mouse button.
+.TP 5
+\-XYZ
+store just a XYZ cloud
+
+.TP 5
+\-paused
+start grabber in paused mode. Toggle pause by pressing the space bar
+or grab single frames by just pressing the left mouse button.
 
 
 .SH SEE ALSO

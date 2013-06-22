@@ -2,11 +2,11 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_openni_save_image \- FIXME
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_openni_save_image [((<device_id> | <path-to-oni-file>) [-imagemode <mode>] | -l [<device_id>]| -h | --help)]
 
 .SH DESCRIPTION
 
@@ -14,15 +14,21 @@ FIXME
 
 .SH OPTIONS
 
-usage: pcl_openni_save_image [((<device_id> | <path-to-oni-file>) [-imagemode <mode>] | -l [<device_id>]| -h | --help)]
-pcl_openni_save_image -h | --help : shows this help
-pcl_openni_save_image -l : list all available devices
-pcl_openni_save_image -l <device-id> : list all available modes for specified device
-                 device_id may be #1, #2, ... for the first, second etc device in the list or
-                 bus@address for the device connected to a specific usb-bus / address combination or
-                 <serial-number>
+.TP 5
+\-h,\-\-help
+shows this help
 
-examples:
+.TP 5
+\-l <device-id>
+if device-id is not set, list all available devices
+otherwise, list all available modes for specified device
+device_id may be #1, #2, ... for the first, second etc device in the
+list or bus@address for the device connected to a specific usb-bus /
+address combination or <serial-number>
+
+
+.SH EXAMPLES
+
 pcl_openni_save_image "#1"
     uses the first device.
 pcl_openni_save_image "./temp/test.oni"

@@ -11,17 +11,26 @@ pcl_ply2pcd \- Convert a PLY file to PCD format.
 .SH DESCRIPTION
 
 Convert a PLY file to PCD format.
-With no INFILE/OUTFILE, or when INFILE/OUTFILE is -, read standard input/output.
+With no INFILE/OUTFILE, or when INFILE/OUTFILE is -, read standard
+input/output.
 
 .SH OPTIONS
 
-  -h, --help           display this help and exit
-  -v, --version        output version information and exit
-  -f, --format=FORMAT  set format
-
+.TP 5
+\-f, \-\-format=FORMAT
+set format
 FORMAT may be one of the following: ascii, binary, binary_big_endian,
 binary_little_endian.
 If no format is given, the format of INFILE is kept.
+
+.TP 5
+\-h, \-\-help
+display this help and exit
+
+.TP 5
+\-v, \-\-version
+output version information and exit
+
 
 .SH SEE ALSO
 

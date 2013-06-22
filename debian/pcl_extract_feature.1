@@ -2,26 +2,41 @@
 
 .SH NAME
 
-FIXME \- FIXME
+pcl_extract_feature \- Extract features from a point cloud.
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B pcl_extract_feature input.pcd output.pcd <options>
 
 .SH DESCRIPTION
 
-FIXME
+Extract features from a point cloud.
 
 .SH OPTIONS
 
-Extract features from a point cloud. For more information, use: pcl_extract_feature -h
-Syntax is: pcl_extract_feature input.pcd output.pcd <options>
-  where options are:
-                     -feature X = the feature descriptor algorithm to be used (default: FPFHEstimation)
-                     -n_radius X = use a radius of Xm around each point to determine the neighborhood in normal estimation (default: 0.000000)
-                     -n_k X      = use a fixed number of X-nearest neighbors around each point in normal estimation (default: 0.000000)
-                     -f_radius X = use a radius of Xm around each point to determine the neighborhood in feature extraction (default: 0.000000)
-                     -f_k X      = use a fixed number of X-nearest neighbors around each point in feature extraction(default: 0.000000)
+.TP 5
+\-feature X
+the feature descriptor algorithm to be used (default: FPFHEstimation)
+
+.TP 5
+\-n_radius X
+use a radius of Xm around each point to determine the neighborhood in
+normal estimation (default: 0.000000)
+
+.TP 5
+\-n_k X
+use a fixed number of X\-nearest neighbors around each point in normal
+estimation (default: 0.000000)
+
+.TP 5
+\-f_radius X
+use a radius of Xm around each point to determine the neighborhood in
+feature extraction (default: 0.000000)
+
+.TP 5
+\-f_k X
+use a fixed number of X\-nearest neighbors around each point in
+feature extraction(default: 0.000000)
 
 
 .SH SEE ALSO

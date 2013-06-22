@@ -2,11 +2,11 @@
 
 .SH NAME
 
-FIXME \- FIXME
+openni_image \- FIXME
 
 .SH SYNOPSIS
 
-.B FIXME [OPTIONS]
+.B openni_image [((<device_id> | <path-to-oni-file>) [-imagemode <mode>] | -l [<device_id>]| -h | --help)]
 
 .SH DESCRIPTION
 
@@ -14,22 +14,27 @@ FIXME
 
 .SH OPTIONS
 
-usage: openni_image [((<device_id> | <path-to-oni-file>) [-imagemode <mode>] | -l [<device_id>]| -h | --help)]
-openni_image -h | --help : shows this help
-openni_image -l : list all available devices
-openni_image -l <device-id> : list all available modes for specified device
-                 device_id may be #1, #2, ... for the first, second etc device in the list or
-                 bus@address for the device connected to a specific usb-bus / address combination or
-                 <serial-number>
+.TP 5
+\-h,\-\-help
+shows this help
 
-examples:
+.TP 5
+\-l <device\-id>
+if device\-id is unset list all available devices
+otherwise list all available modes for specified device
+device_id may be #1, #2, ... for the first, second etc device in the
+list or bus@address for the device connected to a specific usb\-bus /
+address combination or <serial\-number>
+
+.SH EXAMPLES
+
 openni_image "#1"
     uses the first device.
 openni_image "./temp/test.oni"
-    uses the oni-player device to play back oni file given by path.
-openni_image -l
+    uses the oni\-player device to play back oni file given by path.
+openni_image \-l
     lists all available devices.
-openni_image -l "#2"
+openni_image \-l "#2"
     lists all available modes for the second device
 openni_image A00361800903049A
     uses the device with the serial number 'A00361800903049A'.

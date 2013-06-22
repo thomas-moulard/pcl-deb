@@ -1,1 +1,2 @@
 0001-Remove-harcoded-SSE-march-native-compilation-flags.patch
+0002-Fix-typo-in-pcd_grabber_viewer.cpp.patch

@@ -1,0 +1,25 @@
+From: Thomas Moulard <thomas.moulard@gmail.com>
+Date: Sat, 22 Jun 2013 22:58:53 +0900
+Subject: Fix typo in pcd_grabber_viewer.cpp
+
+Fix typo in pcd_grabber_viewer.cpp
+
+Forwarded: no
+Author: Thomas Moulard <thomas.moulard@gmail.com>
+---
+ visualization/tools/pcd_grabber_viewer.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/visualization/tools/pcd_grabber_viewer.cpp b/visualization/tools/pcd_grabber_viewer.cpp
+index 8d57338..35c43c4 100644
+--- a/visualization/tools/pcd_grabber_viewer.cpp
++++ b/visualization/tools/pcd_grabber_viewer.cpp
+@@ -64,7 +64,7 @@ printHelp (int, char **argv)
+   print_info ("                     -file file_name          = PCD file to be read from\n");
+   print_info ("                     -dir directory_path      = directory path to PCD file(s) to be read from\n");
+   print_info ("                     -fps frequency           = frames per second\n");
+-  print_info ("                     -repeat                  = optional parameter that tells wheter the PCD file(s) should be \"grabbed\" in a endless loop.\n");
++  print_info ("                     -repeat                  = optional parameter that tells whether the PCD file(s) should be \"grabbed\" in a endless loop.\n");
+   print_info ("\n");
+   print_info ("                     -cam (*)                 = use given camera settings as initial view\n");
+   print_info (stderr, " (*) [Clipping Range / Focal Point / Position / ViewUp / Distance / Window Size / Window Pos] or use a <filename.cam> that contains the same information.\n");
